@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+:root {
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  height: 100vh;
+  background-color: var(--Dark-Blue);
+  color: var(--Light-Cyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Dark-Grayish-Blue);
+  border-radius: 25px;
+  max-width: 600px;
+  /* padding: 0 2rem; */
+  position: relative;
+  margin: 1rem;
+}
+
+.container h5 {
+  text-align: center;
+  color: var(--Neon-Green);
+  margin-bottom: 0;
+}
+
+.container p {
+  font-size: 28px;
+  font-weight: 800;
+  max-width: 460px;
+  text-align: center;
+  align-self: center;
+  padding: 0 2rem 1rem 2rem;
+  margin: 15px 0;
+}
+
+.container .lines {
+  padding: 0 2rem 3rem 2rem;
+  height: 10px;
+  width: 360px;
+  align-self: center;
+}
+
+.container button {
+  background-color: var(--Neon-Green);
+  color: var(--Dark-Blue);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+
+  /* calc for middle 600px 100% */
+  left: 45%;
+  bottom: -25px;
+  cursor: pointer;
+}
+
+.container button .btnimg {
+  height: 20px;
+}
+
+.container button:hover {
+  background: var(--Neon-Green);
+  color: #050801;
+  box-shadow: 0 0 5px var(--Neon-Green), 0 0 15px var(--Neon-Green),
+    0 0 15px var(--Neon-Green), 0 0 15px var(--Neon-Green);
+}
+
+.container button:nth-child(1) {
+  filter: hue-rotate(270deg);
+}
+
+.container button:nth-child(2) {
+  filter: hue-rotate(110deg);
+}
+
+.footer {
+  position: absolute;
+  bottom: 10px;
+}
+
+.footer .link {
+  text-decoration: none;
+  color: var(--Neon-Green);
+}
+
+@media screen and (max-width: 483px) {
+  .container p {
+    font-size: 22px;
+
+    max-width: 460px;
+    text-align: center;
+    align-self: center;
+    padding: 0 1rem 0.5rem 1rem;
+  }
+
+  .container .lines {
+    padding: 0 1rem 1.5rem 1rem;
+    height: 10px;
+    width: 200px;
+    align-self: center;
+  }
+
+  .container button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+
+    /* calc for middle 600px 100% */
+    left: 45%;
+    bottom: -25px;
+  }
+
+  .container button .btnimg {
+    height: 16px;
+  }
+}
